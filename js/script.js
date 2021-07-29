@@ -37,5 +37,28 @@ clover.sleep();
 baxter.play();
 //console.log(baxter);
 
+clover.isTired = 8;
+francine.isTired = 9;
 
+//console.log(clover, francine);
+
+//create an array to put all pet object
+const allPets = [sora, clover, baxter, cleo, francine];
+console.log(allPets);
+
+//display pets in the browser
+const showPets = function(petArray){
+    pets.innerHTML = ""; //clearing the list before update it with fresh info
+    for (let pet of allPets){
+        let status = "ready to play!";
+        if (this.isTired >= 7){
+            status = "sleeping";
+        }
+        let li = document.createElement("li");
+        li.pets.innerHTML = `<span class = "pet-name">${this.name}</span> the ${this.species} is ${status}`;
+        pets.append(li);
+    }
+};
+
+statusButton.addEventListener("click", showPets(allPets));
 
