@@ -51,11 +51,11 @@ const showPets = function(petArray){
     pets.innerHTML = ""; //clearing the list before update it with fresh info
     for (let pet of allPets){
         let status = "ready to play!";
-        if (this.isTired >= 7){
+        if (pet.isTired >= 7){
             status = "sleeping";
         }
         let li = document.createElement("li");
-        li.pets.innerHTML = `<span class = "pet-name">${this.name}</span> the ${this.species} is ${status}`;
+        li.innerHTML = `<span class = "pet-name">${pet.name}</span> the ${pet.species} is ${status}`;
         pets.append(li);
     }
 };
